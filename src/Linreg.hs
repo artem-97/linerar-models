@@ -1,5 +1,7 @@
 module Linreg where
 
+import System.Random
+import Control.Monad
 import           SGD
 
 a = [1..50] :: [Double]
@@ -7,6 +9,7 @@ b = map (subtract 2 . (* 5)) a
 
 x = [1..10] :: [Double]
 y = reverse [-10..(-1)] :: [Double]
+
 
 linReg2d :: [Double] -> [Double] -> Double -> Double -> Integer -> (Double, Double)
 linReg2d x y w b epochs
